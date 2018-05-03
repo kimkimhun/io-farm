@@ -1,7 +1,7 @@
 <template>
   <v-layout column>
     <v-flex xs12 class="text-xs-center" mt-5>
-      <h3>Sign In</h3>
+      <h3>{{$t('message.signin')}}</h3>
     </v-flex>
     <v-flex xs12 sm6 offset-sm3 mt-3>
       <form @submit.prevent="userSignIn">
@@ -14,7 +14,7 @@
           <v-flex>
             <v-text-field
               name="email"
-              label="Email"
+              :label="$t('message.email')"
               id="email"
               type="email"
               v-model="email"
@@ -23,14 +23,14 @@
           <v-flex>
             <v-text-field
               name="password"
-              label="Password"
+              :label="$t('message.password')"
               id="password"
               type="password"
               v-model="password"
               required></v-text-field>
           </v-flex>
           <v-flex class="text-xs-center" mt-5>
-            <v-btn primary type="submit" :disabled="loading">Sign In</v-btn>
+            <v-btn color="primary" type="submit" :disabled="loading">{{$t('message.signin')}}</v-btn>
           </v-flex>
         </v-layout>
       </form>

@@ -7,6 +7,7 @@ export default {
   'tooltip-setting': 'setting',
   'tooltip-save': 'save',
   'tooltip-cancel': 'cancel',
+  'tooltip-back': 'back',
   'signin': 'Sign In',
   'signup': 'Sign Up',
   'signout': 'Sign Out',

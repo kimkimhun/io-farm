@@ -4,8 +4,7 @@ import firebase from 'firebase'
 
 Vue.use(Router)
 
-const routerOptions = [
-  {
+const routerOptions = [{
     path: '/signup',
     component: 'SignUp'
   },
@@ -16,12 +15,30 @@ const routerOptions = [
   {
     path: '/',
     component: 'Main',
-    meta: {requiresAuth: true}
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/setting',
     component: 'Setting',
-    meta: {requiresAuth: true}
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/setting/temperature',
+    component: 'PageSetting/TemperatureSetting',
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/setting/rotate',
+    component: 'PageSetting/RotateSetting',
+    meta: {
+      requiresAuth: true
+    }
   },
 
 ]
@@ -29,7 +46,8 @@ const routerOptions = [
 const routes = routerOptions.map(route => {
   return {
     path: route.path,
-    component: () => import (`@/components/${route.component}.vue`),
+    component: () =>
+      import (`@/components/${route.component}.vue`),
     meta: route.meta
   }
 })

@@ -7,6 +7,7 @@ export default {
   'tooltip-setting': 'ตั้งค่า',
   'tooltip-save': 'บันทึก',
   'tooltip-cancel': 'ยกเลิก',
+  'tooltip-back': 'ย้อนกลับ',
   'signin': 'ลงชื่อเข้าใช้',
   'signup': 'ลงทะเบียน',
   'signout': 'ออกจากระบบ',

@@ -5,7 +5,18 @@
           <v-card-text class="px-0">
             <h3 class="display-3">{{parseInt(rotate)}} {{$t('message.hour')}}</h3>
             <h3 class="display-2">{{$t('message.main-rotate')}}</h3>
-            <v-slider color="white" min="1" max="5" v-model="rotate" step="0"></v-slider>
+              <v-layout row class="text-xs-center mt-5">
+                <v-flex xs12>
+                  <v-tooltip bottom>
+                    <v-btn slot="activator" dark large fab color="blue lighten-2" @click="add()"><v-icon x-large>add</v-icon></v-btn>
+                    <span>{{$t('message.tooltip-add')}}</span>
+                </v-tooltip>
+                    <v-tooltip bottom>
+                    <v-btn slot="activator" dark large fab color="blue lighten-2" @click="remove()"><v-icon x-large>remove</v-icon></v-btn>
+              <span>{{$t('message.tooltip-remove')}}</span>
+                </v-tooltip>
+                </v-flex>
+              </v-layout>
           </v-card-text>
         </v-card>
     </v-flex>
@@ -42,6 +53,18 @@ export default {
       });
   },
   methods: {
+    add() {
+      this.rotate =
+        parseInt(parseInt(this.rotate)) >= 5
+          ? parseInt(parseInt(this.rotate))
+          : parseInt(parseInt(this.rotate + 1));
+    },
+    remove() {
+      this.rotate =
+        parseInt(this.rotate) <= 1
+          ? parseInt(this.rotate)
+          : parseInt(this.rotate - 1);
+    },
     updateSetting() {
       const update = {
         rotate: parseInt(this.rotate),

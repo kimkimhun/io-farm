@@ -8,6 +8,8 @@ export default {
   'tooltip-save': 'บันทึก',
   'tooltip-cancel': 'ยกเลิก',
   'tooltip-back': 'ย้อนกลับ',
+  'tooltip-add': 'เพิ่ม',
+  'tooltip-remove': 'ลด',
   'signin': 'ลงชื่อเข้าใช้',
   'signup': 'ลงทะเบียน',
   'signout': 'ออกจากระบบ',

@@ -8,6 +8,8 @@ export default {
   'tooltip-save': 'save',
   'tooltip-cancel': 'cancel',
   'tooltip-back': 'back',
+  'tooltip-add': 'Add',
+  'tooltip-remove': 'Remove',
   'signin': 'Sign In',
   'signup': 'Sign Up',
   'signout': 'Sign Out',
